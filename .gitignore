@@ -8,3 +8,4 @@ yarn-error.log*
 dist/
 node_modules/
 mix-manifest.json
+.env

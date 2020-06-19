@@ -1,3 +1,5 @@
+import { env } from '@/helpers'
+
 global.welcome = () => {
-    Logger.log('Welcome')
+    console.log(env(process.env.APP_NAME, null))
 }
