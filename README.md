@@ -16,8 +16,6 @@
 -   Copy `.env.example` to `.env`
 -   Configure `.env`
 -   Run `yarn install`
--   Run `yarn install`
--   Run `yarn clasp`
--
+-   Run `yarn clasp:create`
 
 ## Usage

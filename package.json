@@ -5,6 +5,7 @@
     "license": "MIT",
     "private": true,
     "scripts": {
+        "clasp:create": "clasp create --rootDir ./dist",
         "deploy": "yarn build && clasp push",
         "build": "yarn dev && cpx src/appsscript.json dist",
         "dev": "yarn development",
