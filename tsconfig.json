@@ -4,7 +4,7 @@
         "paths": {
             "@/*": ["./src/*"]
         },
-        "typeRoots": ["./src/@types", "./node_modules/@types"],
+        "typeRoots": ["./types", "node_modules/@types"],
         "module": "commonjs",
         "target": "esnext",
         "strict": true,
@@ -12,5 +12,5 @@
         "noUnusedLocals": false
     },
     "exclude": ["node_modules"],
-    "include": ["./src/*"]
+    "include": ["./src/*", "./types/*"]
 }

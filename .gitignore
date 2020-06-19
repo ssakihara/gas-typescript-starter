@@ -5,5 +5,5 @@ yarn-debug.log*
 yarn-error.log*
 
 #project
-dist
+dist/
 mix-manifest.json
