@@ -6,4 +6,5 @@ yarn-error.log*
 
 #project
 dist/
+node_modules/
 mix-manifest.json
