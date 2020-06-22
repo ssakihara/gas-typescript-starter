@@ -33,6 +33,10 @@
         "typescript": "^3.9.5",
         "vue-template-compiler": "^2.6.11"
     },
+    "engines": {
+        "npm": "Please use yarn.",
+        "node": "12.x"
+    },
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
