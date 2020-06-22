@@ -32,5 +32,13 @@
         "ts-loader": "^7.0.5",
         "typescript": "^3.9.5",
         "vue-template-compiler": "^2.6.11"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.ts": "yarn lint"
     }
 }
