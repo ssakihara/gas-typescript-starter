@@ -1,6 +1,6 @@
 {
     "name": "gas-typescript-starter",
-    "version": "1.0.0",
+    "version": "v1.0",
     "main": "src/app.ts",
     "license": "MIT",
     "private": true,
