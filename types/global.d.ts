@@ -6,6 +6,7 @@ declare namespace NodeJS {
         doPost(
             e: GoogleAppsScript.Events.AppsScriptHttpRequestEvent
         ): GoogleAppsScript.HTML.HtmlOutput | GoogleAppsScript.Content.TextOutput | void
+        updateCalendr(e: GoogleAppsScript.Events.CalendarEventUpdated): void
         welcome(): void
     }
 }

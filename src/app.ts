@@ -10,4 +10,9 @@ global.doPost = (e) => {
     //
 }
 
+//This function is executed when update calendr
+global.updateCalendr = (e) => {
+    //
+}
+
 /* eslint-enable */
