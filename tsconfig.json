@@ -1,16 +1,13 @@
 {
-    "compilerOptions": {
-        "baseUrl": "./",
-        "paths": {
-            "@/*": ["./src/*"]
-        },
-        "typeRoots": ["./types", "node_modules/@types"],
-        "module": "commonjs",
-        "target": "esnext",
-        "strict": true,
-        "esModuleInterop": true,
-        "noUnusedLocals": false
-    },
-    "exclude": ["node_modules"],
-    "include": ["./src/*", "./types/*"]
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017"
+  },
+  "compileOnSave": true,
+  "include": ["src"]
 }
