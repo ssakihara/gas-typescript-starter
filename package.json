@@ -1,43 +1,48 @@
 {
-    "name": "gas-typescript-starter",
-    "version": "v1.0",
-    "main": "src/app.ts",
-    "license": "MIT",
-    "private": true,
-    "scripts": {
-        "clasp:create": "clasp create --rootDir ./dist",
-        "deploy": "yarn build && clasp push",
-        "build": "yarn dev && cpx src/appsscript.json dist",
-        "dev": "yarn development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "lint": "yarn eslint --fix 'src/**/*.ts'"
-    },
-    "devDependencies": {
-        "@types/google-apps-script": "^1.0.30",
-        "@typescript-eslint/eslint-plugin": "^4.20.0",
-        "@typescript-eslint/parser": "^4.20.0",
-        "clasp": "^1.0.0",
-        "cpx": "^1.5.0",
-        "cross-env": "^7.0.3",
-        "dotenv-webpack": "^7.0.2",
-        "eslint": "^7.23.0",
-        "eslint-config-prettier": "^8.1.0",
-        "eslint-loader": "^4.0.2",
-        "eslint-plugin-prettier": "^3.3.1",
-        "gas-webpack-plugin": "^2.0.1",
-        "husky": "^6.0.0",
-        "laravel-mix": "^6.0.13",
-        "lint-staged": "^10.5.4",
-        "prettier": "^2.2.1",
-        "ts-loader": "^8.1.0",
-        "typescript": "^4.2.3",
-        "vue-template-compiler": "^2.6.12"
-    },
-    "engines": {
-        "npm": "Please use yarn.",
-        "node": "12.x"
-    },
-    "lint-staged": {
-        "*.ts": "yarn lint"
-    }
+  "name": "gas-typescript-starter",
+  "version": "v2.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "clasp:create": "clasp create --type sheets",
+    "build": "webpack",
+    "deploy": "npm run build && cpx src/appsscript.json . && clasp push",
+    "lint": "eslint --fix --ext .js,.ts ."
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "dayjs": "^1.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-typescript": "^7.16.7",
+    "@google/clasp": "^2.4.1",
+    "@types/google-apps-script": "^1.0.47",
+    "@types/node": "^14.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "babel-loader": "^8.2.5",
+    "cpx": "^1.5.0",
+    "eslint": "^8.9.0",
+    "eslint-plugin-import": "^2.25.4",
+    "gas-webpack-plugin": "^2.2.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.6.2",
+    "rollup": "^2.71.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.5.4",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "volta": {
+    "node": "16.14.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
 }

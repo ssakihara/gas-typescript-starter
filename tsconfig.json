@@ -1,16 +1,13 @@
 {
-    "compilerOptions": {
-        "baseUrl": "./",
-        "paths": {
-            "@/*": ["./src/*"]
-        },
-        "typeRoots": ["./types", "node_modules/@types"],
-        "module": "commonjs",
-        "target": "esnext",
-        "strict": true,
-        "esModuleInterop": true,
-        "noUnusedLocals": false
-    },
-    "exclude": ["node_modules"],
-    "include": ["./src/*", "./types/*"]
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "None",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "lib": ["esnext"],
+    "experimentalDecorators": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["./src/*", "./types/*"]
 }
