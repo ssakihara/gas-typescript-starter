@@ -9,4 +9,5 @@ dist/
 node_modules/
 mix-manifest.json
 .env
-build
+.clasp.json
+appsscript.json

@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "clasp:create": "clasp create --type sheets",
-    "build": "rollup -c && cpx src/appsscript.json dist",
-    "deploy": "npm run build && clasp push",
+    "build": "rollup -c",
+    "deploy": "npm run build && cpx src/appsscript.json . && clasp push",
     "lint": "eslint --fix --ext .js,.ts ."
   },
   "dependencies": {
