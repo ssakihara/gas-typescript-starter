@@ -1,12 +1,12 @@
 {
   "name": "gas-typescript-starter",
   "version": "v2.0.0",
-  "main": "src/app.ts",
+  "main": "src/index.ts",
   "license": "MIT",
   "private": true,
   "scripts": {
     "clasp:create": "clasp create --type sheets",
-    "build": "rollup -c",
+    "build": "webpack",
     "deploy": "npm run build && cpx src/appsscript.json . && clasp push",
     "lint": "eslint --fix --ext .js,.ts ."
   },
@@ -15,24 +15,26 @@
     "dayjs": "^1.11.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.17.10",
-    "@babel/preset-env": "^7.17.10",
+    "@babel/core": "^7.17.10",
     "@babel/preset-typescript": "^7.16.7",
-    "@rollup/plugin-babel": "^5.3.1",
-    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@google/clasp": "^2.4.1",
     "@types/google-apps-script": "^1.0.47",
+    "@types/node": "^14.0.4",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
-    "clasp": "^1.0.0",
+    "babel-loader": "^8.2.5",
     "cpx": "^1.5.0",
     "eslint": "^8.9.0",
     "eslint-plugin-import": "^2.25.4",
+    "gas-webpack-plugin": "^2.2.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
     "rollup": "^2.71.1",
     "ts-node": "^10.7.0",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
   },
   "volta": {
     "node": "16.14.2"
